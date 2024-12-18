@@ -1,16 +1,17 @@
 @font-face {
-  font-family: 'KerakNeraka';
-  src: url('./KerakNeraka-8Oaoz.otf');
+  font-family: 'ChristmasHugs';
+  src: url('./ChristmasHugs-yweJe.ttf');
   font-weight: normal;
   font-style: normal;
+  
 }
 
 :root {
-  --color-bg: rgba(103, 157, 157, 0.587);
-  --color-fg: #fff;
+  --color-bg: rgba(0, 155, 13, 0.99);
+
 
   --font-body: sans-serif;
-  --font-header: 'KerakNeraka', sans-serif;
+  --font-header: 'ChristmasHugs', sans-serif;
 
   --step--2: clamp(0.6331rem, 0.6141rem + 0.0949vw, 0.6877rem);
   --step--1: clamp(0.844rem, 0.7993rem + 0.2234vw, 0.9724rem);
@@ -44,7 +45,7 @@ main {
 h1 {
     font-size: var(--step-5);
     line-height: 1;
-    color: var(--color-fg);
+    color: rgb(4, 0, 216);
     font-family: var(--font-header);
     letter-spacing: .1em;
 }
@@ -61,3 +62,38 @@ canvas {
     left: 0;
     z-index: 0;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Förhindrar att scrollning visas */
+    background-color: #0d1b2a; /* Mörk bakgrund för kontrast */
+  }
+  
+  .bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2); /* Genomskinliga vita bubblor */
+    border-radius: 50%; /* Gör elementen helt runda */
+    animation: float 10s infinite ease-in-out, sway 5s infinite ease-in-out;
+    pointer-events: none; /* Bubblorna stör inte interaktioner */
+  }
+  
+  /* Animation för att få bubblorna att sväva uppåt */
+  @keyframes float {
+    0% {
+      transform: translateY(100vh);
+    }
+    100% {
+      transform: translateY(-150%);
+    }
+  }
+  
+  /* Animation för att få bubblorna att röra sig i sidled */
+  @keyframes sway {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(50px);
+    }
+  }
