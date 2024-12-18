@@ -7,7 +7,7 @@
 }
 
 :root {
-  --color-bg: rgba(0, 155, 13, 0.99);
+  --color-bg: rgba(109, 168, 114, 0.99);
 
 
   --font-body: sans-serif;
@@ -45,7 +45,7 @@ main {
 h1 {
     font-size: var(--step-5);
     line-height: 1;
-    color: rgb(4, 0, 216);
+    color: rgba(255, 157, 0, 0.801);
     font-family: var(--font-header);
     letter-spacing: .1em;
 }
@@ -67,12 +67,12 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden; /* Förhindrar att scrollning visas */
-    background-color: #0d1b2a; /* Mörk bakgrund för kontrast */
+    background-color: #af2900; /* Mörk bakgrund för kontrast */
   }
   
   .bubble {
     position: absolute;
-    background: rgba(255, 255, 255, 0.2); /* Genomskinliga vita bubblor */
+    background: rgba(175, 39, 39, 0.2); /* Genomskinliga vita bubblor */
     border-radius: 50%; /* Gör elementen helt runda */
     animation: float 10s infinite ease-in-out, sway 5s infinite ease-in-out;
     pointer-events: none; /* Bubblorna stör inte interaktioner */
@@ -97,3 +97,15 @@ body {
       transform: translateX(50px);
     }
   }
+
+ .glow-text, body {
+    font-size: 2rem; /* Justera storlek efter behov */
+    color: #9c0f0f; /* Textens grundfärg */
+    text-shadow: 
+        0 0 5px rgb(216, 0, 0),   /* Första lager av glow */
+        0 0 10px rgba(244, 0, 0, 0.645),  /* Andra lager av glow */
+        0 0 20px #ff0000,  /* Tredje lager, färgad glow */
+        0 0 30px #ff0000, 
+        0 0 40px #4b1515, 
+        0 0 50px #2a0d0d;
+}
